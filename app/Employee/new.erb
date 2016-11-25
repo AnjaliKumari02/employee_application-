@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+
+#intro{
+    background-color: lightblue;
+}
+
+</style>
+</head>
 
 <body>
 
-<div data-role="page">
+<div  data-role="page">
 
   <div data-role="header" data-position="inline">
     <h1>New <%= @employee.title %></h1>
@@ -14,6 +23,7 @@
 
   <div data-role="content">
     <form method="POST" action="<%= url_for :action => :create %>">
+
       <input input type="hidden" name="id" value="<%= @employee.object %>"/>
 
       
@@ -24,25 +34,25 @@
       
           
             
-            <h6 class="groupTitle">Company</h6>
-      <ul>
-          <li>
+            
+            <label for="employee[company]" class="fieldLabel">Company</label>
+            <br>
+      
               <select name="employee[company]">
                   <option value="Facebook" selected>Facebook</option>
                   <option value="Twitter">Twitter</option>
                   <option value="Google">Google</option>     
               </select>
-          </li>
-      </ul>
-          
+        
+          <br>
       
-                <h6 class="groupTitle">Address</h6>
-      <ul>
-          <li class="textarea">
+                <label for="employee[address]" class="fieldLabel">Address</label>
+                <br>
+     
              <textarea rows="5" cols="30" name= 
 "employee[address]" > </textarea>
-          </li>
-      </ul>
+<br>
+         
 
             
           
@@ -53,8 +63,9 @@
          
       
           
-            <h6 class="groupTitle">Gender</h6>
-       
+            <label for="employee[gender]" class="fieldLabel">Gender</label>
+            <br>
+            <br>
             
             <input type="radio" name="employee[gender]" value="male" checked> Male<br>
             <input type="radio" name="employee[gender]" value="female"> Female<br>
