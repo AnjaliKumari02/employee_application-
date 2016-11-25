@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @employee.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input input type="hidden" name="id" value="<%= @employee.object %>"/>
+
+      
+          
+            <label for="employee[name]" class="fieldLabel">Name</label>
+            <input type="text" id="employee[name]" name="employee[name]" <%= placeholder("Name") %> />
+          
+      
+          
+            
+            <h6 class="groupTitle">Company</h6>
+      <ul>
+          <li>
+              <select name="employee[company]">
+                  <option value="Facebook" selected>Facebook</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="Google">Google</option>     
+              </select>
+          </li>
+      </ul>
+          
+      
+                <h6 class="groupTitle">Address</h6>
+      <ul>
+          <li class="textarea">
+             <textarea rows="5" cols="30" name= 
+"employee[address]" > </textarea>
+          </li>
+      </ul>
+
+            
+          
+      
+          
+            <label for="employee[age]" class="fieldLabel">Age</label>
+            <input type="text" id="employee[age]" name="employee[age]" <%= placeholder("Age") %> />
+         
+      
+          
+            <h6 class="groupTitle">Gender</h6>
+       
+            
+            <input type="radio" name="employee[gender]" value="male" checked> Male<br>
+            <input type="radio" name="employee[gender]" value="female"> Female<br>
+            <input type="radio" name="employee[gender]" value="other"> Other<br>
+
+            
+         
+      
+         
+            <label for="employee[salary]" class="fieldLabel">Salary</label>
+            <input type="text" id="employee[salary]" name="employee[salary]" <%= placeholder("Salary") %> />
+          
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
+</body>
+</html>
+

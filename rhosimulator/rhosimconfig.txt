@@ -1,0 +1,7 @@
+rhodes_path='/Users/a731597/.rvm/gems/ruby-1.9.3-p551/gems/rhodes-5.0.38'
+app_version='1.0'
+app_name='employee_application'
+reload_app_changes=1
+debug_port=
+debug_host='127.0.0.1'
+ext_path=/Users/a731597/.rvm/gems/ruby-1.9.3-p551/gems/rhodes-5.0.38/lib/commonAPI/coreapi;/Users/a731597/.rvm/gems/ruby-1.9.3-p551/gems/rhodes-5.0.38/lib/extensions/json;/Users/a731597/.rvm/gems/ruby-1.9.3-p551/gems/rhoconnect-client-5.0.38/lib/../ext/rhoconnect-client;
